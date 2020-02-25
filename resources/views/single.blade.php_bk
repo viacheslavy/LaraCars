@@ -1,0 +1,760 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="container-fluid productsingle-parent">
+    <div class="container productsingle">
+        <div class="col-xs-12 col-sm-4 col-md-3 productsingle-sidebar-parent">
+            <div class="productsingle-sidebar">
+                <div class="productsingle-guarantee">
+                    <div class="productsingle-guarantee-child">
+                        <img src="{{ asset('fe_assets/img/guarantees.png') }}" class="productsingle-guarantee-img">
+                            <p><img src="{{ asset('fe_assets/img/check.png') }}"> Accueil personnalis&eacute;</p>
+                            <p>..........................</p>
+                            <p><img src="{{ asset('fe_assets/img/check.png') }}"> Prix Int&eacute;ressant</p>
+                            <p>..........................</p>
+                            <p><img src="{{ asset('fe_assets/img/check.png') }}"> <span>Prise en charges <br>des contraintes administratives</span></p>
+                            <p>..........................</p>
+                            <p><img src="{{ asset('fe_assets/img/check.png') }}"> Examen minutieux <br>et contr&ocirc;le de qualite</p>
+                            <p>..........................</p>
+                            <p><img src="{{ asset('fe_assets/img/check.png') }}"> S&eacute;lection rigoureuse <br>du vehicule</p>
+                            <p>..........................</p>
+                            <img src="{{ asset('fe_assets/img/productsingle-guranatees-logo.png') }}">
+                    </div>
+                </div>
+                <div class="sidebar-divider">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="productsingle-subscribe">
+                    <img src="{{ asset('/fe_assets') }}/img/productsingle-left-subscribe.png">
+                    <div class="subscribe-bckg">
+                        <h2>Cr&eacute;ez un compte en <span>3</span> clics</h2>
+                        @include('layouts.subscribe')
+                    </div>
+                </div>
+                <div class="sidebar-divider">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-8 col-md-9 productsingle">
+            <div class="productsingle-body">
+                <div class="productsingle-head-parent">
+                
+                
+                <div class="productsingle-head">
+                    <h1><span>{{ $car->year }}</span><br>{{ $car->brand }} {{ $car->model }}</h1>
+                </div>
+                <div class="productsingle-cost">
+                    <img src="{{ asset('/fe_assets') }}/img/productsingle-red.png">
+                    <div class="productsingle-cost-text">
+                        <img src="{{ asset('/fe_assets') }}/img/productsingle-line.png">
+                        <span>|</span>
+                        <p><?php
+
+                            $convertedPrice = 0;
+                            if(is_numeric($car->price))
+                                $convertedPrice = $car->price;
+
+                            $finalPrice = $convertedPrice;
+
+                            $setting = \App\Setting::where('enabled', '1');
+                            $addOnPrice = 0;
+
+                            if($setting->count()) {
+                                $setting = $setting->first();
+                                if($setting->percentage != 0) {
+                                    $addOnPrice = ($finalPrice * $setting->percentage) / 100;
+                                } else if($setting->fixed_rate != 0) {
+                                    $addOnPrice = $setting->fixed_rate;
+                                } else if($setting->id == 1) {
+                                    $percentage = \App\Http\Controllers\GlobalPercentageSettingsController::getRangePercentageSingle($finalPrice);
+
+                                    $addOnPrice = ($finalPrice * $percentage) / 100;
+                                }
+                            }
+
+
+
+                            $finalPrice += $addOnPrice;
+                            $finalPrice = round($finalPrice);
+
+                            $ostatak = $finalPrice % 100;
+
+                            $finalPrice = $finalPrice - $ostatak + 100;
+
+                            ?>
+
+                            {{ number_format($finalPrice) }} &euro;</p>
+                    </div>
+                </div>
+
+
+
+                    <?php $imageExists = 0;?>
+
+                    @foreach($car->images as $image)
+                        @if(\App\Http\Controllers\CarsFEController::checkRemoteFile($image->big) == 1)
+                            <?php $imageExists = 1; ?>
+                        @endif
+                    @endforeach
+
+                    @if($imageExists == 1)
+<div class="productsingle-wrapbckg">
+
+
+                <!-- slider -->
+                <div class="row">
+                    <div class="col-xs-12" id="slider">
+                        <!-- Top part of the slider -->
+                        <div class="row">
+                            <div class="col-sm-12" id="carousel-bounding-box">
+                                <div class="carousel slide" id="myCarousel2">
+                                    <!-- Carousel items -->
+                                    <div class="carousel-inner">
+
+
+                                        <?php
+                                            $i = 0;
+                                        ?>
+
+                                        @foreach($car->images as $image)
+                                            @if(\App\Http\Controllers\CarsFEController::checkRemoteFile($image->big) == 1)
+                                                <div class="@if($i == 0) active @endif item" data-slide-number="{{ $i }}">
+                                                    <img src="{{ $image->big }}" class="zoomImage" style="width: 100%" data-zoom-image="{{ $image->big }}">
+                                                </div>
+                                            @endif
+                                            <?php
+                                            $i++;
+                                            ?>
+                                        @endforeach
+
+                                    </div><!-- Carousel nav -->
+                                    <a class="left carousel-control" href="#myCarousel2" role="button" data-slide="prev" style="z-index: 0">
+                                        <i class="fa fa-caret-left" aria-hidden="true"></i>
+                                    </a>
+                                    <a class="right carousel-control" href="#myCarousel2" role="button" data-slide="next" style="z-index: 0">
+                                        <i class="fa fa-caret-right" aria-hidden="true"></i>
+                                    </a>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div><!--/Slider-->
+
+                <div class="row hidden-xs" id="slider-thumbs">
+                    <!-- Bottom switcher of slider -->
+                    <ul class="hide-bullets">
+
+                        <?php
+                        $i = 0;
+                        ?>
+                        @foreach($car->images as $image)
+
+                                @if(\App\Http\Controllers\CarsFEController::checkRemoteFile($image->medium) == 1)
+                                    <li class="col-sm-2">
+                                        <a class="thumbnail" id="carousel-selector-{{ $i }}"><img src="{{ $image->medium }}"></a>
+                                    </li>
+                                @endif
+
+
+                            <?php
+                            $i++;
+                            ?>
+                        @endforeach
+
+                    </ul>
+                </div>
+
+
+                
+                
+                </div>
+                        @endif
+</div>
+
+
+
+                <div class="productsingle-body-q">
+                    <a id="cl-ach" href="#" data-toggle="modal" data-target="#modalAcheter"><img src="{{ asset('/fe_assets') }}/img/productsingle-acheter-hover.png">
+                        <img src="{{ asset('/fe_assets') }}/img/productsingle-acheter.png" class="fhover">
+                    </a>
+
+                    <a id="cl-jesus" href="#" data-toggle="modal" data-target="#modalJesus"><img src="{{ asset('/fe_assets') }}/img/productsingle-jesuis.png">
+                        <img src="{{ asset('/fe_assets') }}/img/productsingle-jesuis-hover.png" class="fhover">
+                    </a>
+
+                    <a id="cl-quest" href="#" data-toggle="modal" data-target="#modalQuest"><img src="{{ asset('/fe_assets') }}/img/productsingle-poser.png">
+                        <img src="{{ asset('/fe_assets') }}/img/productsingle-poser-hover.png" class="fhover">
+                    </a>
+
+                    <a id="cl-expert" href="#" data-toggle="modal" data-target="#modalExpert"><img src="{{ asset('/fe_assets') }}/img/productsingle-inspecter.png">
+                        <img src="{{ asset('/fe_assets') }}/img/productsingle-inspecter-hover.png" class="fhover">
+                    </a>
+
+                </div>
+                <div class="productsingle-body-footer">
+                    <div class="col-xs-12 col-sm-6 col-md-5 productsingle-body-footer-left">
+                        <p><span>Marque:</span> @if($car->brand){{ $car->brand }}@else Nous contacter @endif</p>
+                        <hr>
+                        <p><span>Mod&egrave;le:</span> @if($car->model){{ $car->model }}@else Nous contacter @endif</p>
+                        <hr>
+                        <p><span>Annee:</span> @if($car->year){{ $car->year }}@else Nous contacter @endif</p>
+                        <hr>
+                        <p><span>Kilometrage:</span> @if($car->mileage){{ $car->mileage }} km @else Nous contacter @endif</p>
+                        <hr>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-7">
+                        <h4>Details:</h4>
+                        <div class="productsingle-body-footer-right">
+                            <p>Motorisation : @if($car->engine){{ $car->engine }}@else Nous contacter @endif</p>
+                            <p>Transmission : @if($car->transmission){{ $car->transmission }}@else Nous contacter @endif</p>
+                            <p>
+                                {{ $car->description }}
+
+                            </p>
+                            <p>AD Reference: {{ $car->referenceID }}</p>
+                            <p><br>Dossier photo et informations complémentaires sur demande, Le prix affiché s'entend Toutes Taxes   Comprises, Véhicule dédouané et mis à disposition en r&eacute;gion Parisienne sous quatre à six semaines,  Possibilité de livraison sécurisée à domicile.Passionné de voitures américaines, n'hésitez pas à nous contacter. </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid productsingle-footer-parent">
+    <div class="container productsingle-footer">
+        <div class="productsingle-footer-head">
+            <h2>VEHICULES SIMILAIRES</h2>
+            <hr>
+        </div>
+
+        <?php
+            $make = $car->brand;
+            $similars = \App\Car::where('brand', 'LIKE', '%' . $make . '%')->where('id', '!=', $car->id)->take(10)->get();
+            $i = 0;
+        ?>
+
+        {{--<div id="myCarousel2" class="carousel slide" data-ride="carousel">--}}
+            <div class="carousel-inner2" role="listbox">
+
+        @foreach($similars as $similar)
+
+                    <div class="productsingle-footer-one slide">
+                        <a href="{{ route('get.product', $similar->id) }}">
+                            <?php
+                            $title = str_replace("Details about", "", $similar->title);
+                            if(strpos($similar->title, 'Details about') !== false) {
+                                $title = substr($title, 5);
+                            }
+                            ?>
+
+                            <p>{{ substr($title, 0, 27) }} ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                            <?php $featuredImage = 0; ?>
+                            @if($similar->images->count() != 0)
+                                @foreach($similar->images as $image)
+
+                                    @if($image->featured == 1)
+                                        @if(\App\Http\Controllers\CarsFEController::checkRemoteFile($image->medium) == 1)
+                                            <img src="{{ $image->medium }}">
+                                        @else
+                                            <img src="{{ asset('placeholder.jpg') }}" alt="">
+                                        @endif
+
+                                        <?php $featuredImage = 1; ?>
+                                        <?php break; ?>
+                                    @endif
+
+                                @endforeach
+
+                                @if($featuredImage == 0)
+                                    <img src="{{ asset('placeholder.jpg') }}" alt="">
+                                @endif
+                            @else
+                                <img src="{{ asset('placeholder.jpg') }}" alt="">
+                            @endif
+                        </div>
+                        <a href="{{ route('get.product', $similar->id) }}" class="search-btn">En savoir plus</a>
+                    </div>
+
+            <?php $i++; ?>
+        @endforeach
+            </div>
+        {{--</div>--}}
+
+        </div>
+
+
+        {{--<div class="col-xs-12 pagenumber">--}}
+            {{--<div class="pagenumber-child">--}}
+                {{--<a href="#" class="pagenumber-active">1</a>--}}
+                {{--<a href="#">2</a>--}}
+                {{--<a href="#">3</a>--}}
+                {{--<a href="#">4</a>--}}
+                {{--<a href="#">5</a>--}}
+                {{--<a href="#">6</a>--}}
+                {{--<a href="#">7</a>--}}
+                {{--<a href="#">8</a>--}}
+                {{--<a href="#" class="pagenumber-right"><i class="fa fa-chevron-right" aria-hidden="true"></i></a>--}}
+            {{--</div>--}}
+        {{--</div>--}}
+    </div>
+</div>
+
+<div id="modalJesus" class="modal fade in" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><img src="{{ asset('fe_assets/img/closewindows.png') }}"></button>
+                <div class="page-head-parent page-presentation-top">
+                    <div class="page-head">
+                        <p>{{ $car->brand }} {{ $car->model }} {{ $car->year }} </p>
+                        <hr>
+                        <h3>Réservez ce véhicule sans plus attendre !</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left contact-content">
+                    <div class="modal-acheter">
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nous r&eacute;aliserons alors pour vous les contr&ocirc;les d'usage afin de vous garantir une sécurité optimale de la transaction.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nous mandaterons un expert automobile à se rendre sur place pour inspecter le véhicule avant l'envoi des fonds.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nous vous représentons dans le cadre de la vente aux enchères dans les limites du cadre prélablement défini ensemble.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nos agents transitaires se chargeront d'organiser le transport de votre véhicule dans les meilleures conditions.</p>
+                        <p class="modal-acheter-red"><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Notre service administratif se chargera de toutes les formalités pour votre plus grande tranquilité.</p>
+                    </div>
+                    <div class="sidebar-divider">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p>Vous avez besoin d'un conseil, d'une estimation, d'informations complémentaires sur un véhicule ou vous souhaitez que nous trouvions pour vous un modèle bien précis ? En tant que passionnés de véhicules de collection et de voitures américaines, nous nous ferons le plus grand plaisir à traiter votre demande dans les meilleurs délais.</p>
+
+                    <div class="contact-form">
+                        <form id="modal4Form" action="{{ route('post.send.mail') }}" class="form-horizontal allForms putErrorsRed" method="post" data-parsley-validate="" novalidate="">
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="ad_reference" value="{{ $car->referenceID }}">
+                            <input type="hidden" name="title" value="{{ $car->title }}">
+                            <input type="hidden" name="retro_link" value="{{ route('get.product', $car->id) }}">
+                            <input type="hidden" name="original_url" value="{{ $car->original_url }}">
+                            <input type="hidden" name="original_price" value="{{ $car->original_price }}">
+                            <input type="hidden" name="price" value="{{ $finalPrice }} &euro;">
+
+                            <fieldset>
+                                <div class="col-xs-12 contact-c-inputs">
+                                    <div class="form-group">
+                                        <input id="name" name="name" type="text" class="form-control" placeholder="Nom *" data-parsley-required-message="Nom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="lname" type="text" class="form-control" placeholder="Prénom*" data-parsley-required-message="Prenom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="email" type="text" class="form-control" placeholder="Email *" data-parsley-required-message="E-mail obligatoire" data-parsley-trigger="change focusout" required="" data-parsley-type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="phone" type="text" class="form-control" placeholder="Numéro de téléphone" data-parsley-required-message="T&eacute;l&eacute;phone requis" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="6" placeholder="Message*" data-parsley-required-message="Message obligatoire" data-parsley-trigger="change focusout" required=""></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <input class="form-control center-block" style="width: 33% !important;" type="text" placeholder="Entrez le texte.." name="validator" id="validator" size="4" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <img src="{{ route('get.captcha') }}" alt="CAPTCHA image" align="top" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" value="">Recevoir la Newsletter Fast &amp; Retro</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="search-btn">Envoyer </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalright">
+                    <div class="contact-sidebar">
+                        <img src="{{ asset('fe_assets/img/product-single-modal-pic-1.png') }}">
+                        <a href="#">showrooms</a>
+                        <p><strong>R&eacute;gion Parisienne</strong>
+                            <br>112 Avenue de paris
+                            <br>94300 Vincennes
+                            <br><span>+33 1 80 89 45 45</span>
+                        </p>
+                        <p><strong>Etats-Unis </strong>
+                            <br>9903 Santa Monica Blvd
+                            <br>Beverly Hills , CA, 90212
+                            <br><span>925-484-2262</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div id="modalAcheter" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><img src="{{ asset('fe_assets/img/closewindows.png') }}"></button>
+                <div class="page-head-parent page-presentation-top">
+                    <div class="page-head">
+                        <p>{{ $car->brand }} {{ $car->model }} {{ $car->year }} </p>
+                        <hr>
+                        <h3>Le transport de votre v&eacute;hicule</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left contact-content">
+                    <div class="modal-acheter">
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nous r&eacute;aliserons alors pour vous les contr&ocirc;les d'usage afin de vous garantir une s&eacute;curit&eacute; optimale de la transaction.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nous mandaterons un expert automobile &agrave; se rendre sur place pour inspecter le v&eacute;hicule avant l'envoi des fonds.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nous vous repr&eacute;sentons dans le cadre de la vente aux ench&egrave;res dans les limites du cadre pr&eacute;lablement d&eacute;fini ensemble.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Nos agents transitaires se chargeront d'organiser le transport de votre v&eacute;hicule dans les meilleures conditions.</p>
+                        <p class="modal-acheter-red"><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Notre service administratif se chargera de toutes les formalit&eacute;s pour votre plus grande tranquilit&eacute;.</p>
+                    </div>
+                    <div class="sidebar-divider">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p>Vous avez besoin d'un conseil, d'une estimation, d'informations compl&eacute;mentaires sur un v&eacute;hicule ou vous souhaitez que nous trouvions pour vous un mod&egrave;le bien pr&eacute;cis ? En tant que passionn&eacute;s de v&eacute;hicules de collection et de voitures am&eacute;ricaines, nous nous ferons le plus grand plaisir &agrave; traiter votre demande dans les meilleurs d&eacute;lais.</p>
+
+                    <div class="contact-form">
+                        <form id="modal1Form" action="{{ route('post.send.mail') }}" class="form-horizontal allForms putErrorsRed" method="post" data-parsley-validate="">
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="ad_reference" value="{{ $car->referenceID }}">
+                            <input type="hidden" name="title" value="{{ $car->title }}">
+                            <input type="hidden" name="retro_link" value="{{ route('get.product', $car->id) }}">
+                            <input type="hidden" name="original_url" value="{{ $car->original_url }}">
+                            <input type="hidden" name="original_price" value="{{ $car->original_price }}">
+                            <input type="hidden" name="price" value="{{ $finalPrice }} &euro;">
+
+                            <fieldset>
+                                <div class="col-xs-12 contact-c-inputs">
+                                    <div class="form-group">
+                                        <input id="name" name="name" type="text" class="form-control" placeholder="Nom *" data-parsley-required-message="Nom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="lname" type="text" class="form-control" placeholder="Pr&eacute;nom*" data-parsley-required-message="Prenom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="email" type="text" class="form-control" placeholder="Email *" data-parsley-required-message="E-mail obligatoire" data-parsley-trigger="change focusout" required="" data-parsley-type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="phone" type="text" class="form-control" placeholder="Num&eacute;ro de t&eacute;l&eacute;phone" data-parsley-required-message="T&eacute;l&eacute;phone requis" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="6" placeholder="Message*" data-parsley-required-message="Message obligatoire" data-parsley-trigger="change focusout" required=""></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <input class="form-control center-block" style="width: 33% !important;" type="text" placeholder="Entrez le texte.." name="validator" id="validator" size="4" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <img src="{{ route('get.captcha') }}" alt="CAPTCHA image" align="top" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" value="">Recevoir la Newsletter Fast &amp; Retro
+                                            </label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="search-btn">Envoyer </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalright">
+                    <div class="contact-sidebar">
+                        <img src="{{ asset('fe_assets/img/product-single-modal-pic-1.png') }}">
+                        <a href="#">showrooms</a>
+                        <p><strong>R&eacute;gion Parisienne</strong>
+                            <br>112 Avenue de paris
+                            <br>94300 Vincennes
+                            <br><span>+33 1 80 89 45 45</span>
+                        </p>
+                        <p><strong>Etats-Unis </strong>
+                            <br>9903 Santa Monica Blvd
+                            <br>Beverly Hills , CA, 90212
+                            <br><span>310-928-5770</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div id="modalQuest" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><img src="{{ asset('fe_assets/img/closewindows.png') }}"></button>
+                <div class="page-head-parent page-presentation-top">
+                    <div class="page-head">
+                        <p>{{ $car->brand }} {{ $car->model }} {{ $car->year }} </p>
+                        <hr>
+                        <h3>Posez une question</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left contact-content">
+                    <div class="sidebar-divider">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="modal2Form" action="{{ route('post.send.mail') }}" class="form-horizontal allForms putErrorsRed" method="post" data-parsley-validate="">
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="ad_reference" value="{{ $car->referenceID }}">
+                            <input type="hidden" name="title" value="{{ $car->title }}">
+                            <input type="hidden" name="retro_link" value="{{ route('get.product', $car->id) }}">
+                            <input type="hidden" name="original_url" value="{{ $car->original_url }}">
+                            <input type="hidden" name="original_price" value="{{ $car->original_price }}">
+                            <input type="hidden" name="price" value="{{ $finalPrice }} &euro;">
+
+                            <fieldset>
+                                <div class="col-xs-12 contact-c-inputs">
+
+                                    <div class="form-group">
+                                        <input id="name" name="name" type="text" class="form-control" placeholder="Nom *" data-parsley-required-message="Nom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="lname" type="text" class="form-control" placeholder="Pr&eacute;nom*" data-parsley-required-message="Prenom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="email" type="text" class="form-control" placeholder="Email *" data-parsley-required-message="E-mail obligatoire" data-parsley-trigger="change focusout" required="" data-parsley-type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="phone" type="text" class="form-control" placeholder="Num&eacute;ro de t&eacute;l&eacute;phone" data-parsley-required-message="T&eacute;l&eacute;phone requis" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="6" placeholder="Message*" data-parsley-required-message="Message obligatoire" data-parsley-trigger="change focusout" required=""></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <input class="form-control center-block" style="width: 33% !important;" type="text" placeholder="Entrez le texte.." name="validator" id="validator" size="4" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <img src="{{ route('get.captcha') }}" alt="CAPTCHA image" align="top" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" value="">Recevoir la Newsletter Fast &amp; Retro</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="search-btn">Envoyer </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalright">
+                    <div class="contact-sidebar">
+                        <img src="{{ asset('fe_assets/img/product-single-modal-pic-1.png') }}">
+                        <a href="#">showrooms</a>
+                        <p><strong>R&eacute;gion Parisienne</strong>
+                            <br>112 Avenue de paris
+                            <br>94300 Vincennes
+                            <br><span>+33 1 80 89 45 45</span>
+                        </p>
+                        <p><strong>Etats-Unis </strong>
+                            <br>9903 Santa Monica Blvd
+                            <br>Beverly Hills , CA, 90212
+                            <br><span>310-928-5770</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<!-- Modal -->
+<div id="modalExpert" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><img src="{{ asset('fe_assets/img/closewindows.png') }}"></button>
+                <div class="page-head-parent page-presentation-top">
+                    <div class="page-head">
+                        <p>{{ $car->brand }} {{ $car->model }} {{ $car->year }} </p>
+                        <hr>
+                        <h3>Expertiser un v&eacute;hicule avant achat permet d'&eacute;viter les mauvaises surprises le jour de la livraison.</h3>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-body">
+                <div class="modal-left contact-content">
+                    <div class="modal-acheter">
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Un rapport de 12 pages fournit les informations requises &agrave; une prise de d&eacute;cision en parfaite connaissance du bien achet&eacute;.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> De nombreuses photos d&eacute;taill&eacute;es accompagnent le rapport d'expertise permet tant de mettre en lumi&egrave;re la qualit&eacute; cosm&eacute;tique et m&eacute;canique du v&eacute;hicule.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Ce service vous permet d'&eacute;conomiser bien plus qu'un billet d'avion et la perte de temps n&eacute;cessaire &agrave; une visite. </p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> De plus elle est r&eacute;alis&eacute;s par de v&eacute;ritables experts automobiles sp&eacute;cialistes des v&eacute;hicules de collection.</p>
+                        <p><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Toutes les expertises sont r&eacute;alis&eacute;es par un organisme tiers, garant de l'ind&eacute;pendance et de l'objectivit&eacute; des rapports d&eacute;livr&eacute;s.</p>
+                        <p class="modal-acheter-red"><span><i class="fa fa-caret-right" aria-hidden="true"></i></span> Cette &eacute;tape indispensable est factur&eacute;e 450 &euro; H.T. pour une expertise int&eacute;grale avec essai routier et dossier photo.</p>
+                    </div>
+                    <div class="sidebar-divider">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                    <p>Remplissez simplement le formulaire ci-apr&egrave;s et vous serez contact&eacute; par un conseiller qui organisera la venue d'un expert chez le vendeur du v&eacute;hicule que vous souhaitez acquerir.</p>
+
+                    <div class="contact-form">
+                        <form id="modal3Form" action="{{ route('post.send.mail') }}" class="form-horizontal allForms putErrorsRed" method="post" data-parsley-validate="">
+                            {{ csrf_field() }}
+
+                            <input type="hidden" name="ad_reference" value="{{ $car->referenceID }}">
+                            <input type="hidden" name="title" value="{{ $car->title }}">
+                            <input type="hidden" name="retro_link" value="{{ route('get.product', $car->id) }}">
+                            <input type="hidden" name="original_url" value="{{ $car->original_url }}">
+                            <input type="hidden" name="original_price" value="{{ $car->original_price }}">
+                            <input type="hidden" name="price" value="{{ $finalPrice }} &euro;">
+
+
+                            <fieldset>
+                                <div class="col-xs-12 contact-c-inputs">
+                                    <div class="form-group">
+                                        <input id="name" name="name" type="text" class="form-control" placeholder="Nom *" data-parsley-required-message="Nom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="lname" type="text" class="form-control" placeholder="Pr&eacute;nom*" data-parsley-required-message="Prenom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="email" type="text" class="form-control" placeholder="Email *" data-parsley-required-message="E-mail obligatoire" data-parsley-trigger="change focusout" required="" data-parsley-type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="phone" type="text" class="form-control" placeholder="Num&eacute;ro de t&eacute;l&eacute;phone" data-parsley-required-message="T&eacute;l&eacute;phone requis" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <textarea class="form-control" name="message" rows="6" placeholder="Message*" data-parsley-required-message="Message obligatoire" data-parsley-trigger="change focusout" required=""></textarea>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="row">
+                                            <div class="col-md-12 text-center">
+                                                <input class="form-control center-block" style="width: 33% !important;" type="text" placeholder="Entrez le texte.." name="validator" id="validator" size="4" />
+                                            </div>
+                                        </div>
+                                        <br>
+                                        <div class="row">
+                                            <img src="{{ route('get.captcha') }}" alt="CAPTCHA image" align="top" />
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <div class="checkbox">
+                                            <label>
+                                                <input type="checkbox" value="">Recevoir la Newsletter Fast &amp; Retro</label>
+                                        </div>
+                                    </div>
+
+                                    <div class="form-group">
+                                        <button class="search-btn">Envoyer </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+                <div class="modalright">
+                    <div class="contact-sidebar">
+                        <img src="{{ asset('fe_assets/img/product-single-modal-pic-1.png') }}">
+                        <a href="#">showrooms</a>
+                        <p><strong>R&eacute;gion Parisienne</strong>
+                            <br>112 Avenue de paris
+                            <br>94300 Vincennes
+                            <br><span>+33 1 80 89 45 45</span>
+                        </p>
+                        <p><strong>Etats-Unis </strong>
+                            <br>9903 Santa Monica Blvd
+                            <br>Beverly Hills , CA, 90212
+                            <br><span>310-928-5770</span>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+@endsection

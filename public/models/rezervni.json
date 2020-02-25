@@ -1,0 +1,72 @@
+{
+  "data": [
+    {
+      "value": "Akumulatori",
+      "label": "Akumulatori"
+    },
+    {
+      "value": "Amortizeri",
+      "label": "Amortizeri"
+    },
+    {
+      "value": "Elektrika",
+      "label": "Elektrika"
+    },
+    {
+      "value": "Elektronika",
+      "label": "Elektronika"
+    },
+    {
+      "value": "Enterijer",
+      "label": "Enterijer"
+    },
+    {
+      "value": "Filteri",
+      "label": "Filteri"
+    },
+    {
+      "value": "Hlaðenje/Grijanje/Klima",
+      "label": "Hlaðenje/Grijanje/Klima"
+    },
+    {
+      "value": "Izduvni sistemi/Auspuh",
+      "label": "Izduvni sistemi/Auspuh"
+    },
+    {
+      "value": "Karoserija/Limarija",
+      "label": "Karoserija/Limarija"
+    },
+    {
+      "value": "Koènice",
+      "label": "Koènice"
+    },
+    {
+      "value": "Mjenjaè",
+      "label": "Mjenjaè"
+    },
+    {
+      "value": "Motor",
+      "label": "Motor"
+    },
+    {
+      "value": "Sistem hlaðenja motora",
+      "label": "Sistem hlaðenja motora"
+    },
+    {
+      "value": "Sistem napajanja gorivom",
+      "label": "Sistem napajanja gorivom"
+    },
+    {
+      "value": "Stakla",
+      "label": "Stakla"
+    },
+    {
+      "value": "Svijetlosna grupa",
+      "label": "Svijetlosna grupa"
+    },
+    {
+      "value": "Trap",
+      "label": "Trap"
+    }
+  ]
+}

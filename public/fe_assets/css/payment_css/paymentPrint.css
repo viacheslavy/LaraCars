@@ -1,0 +1,22 @@
+@media print
+{
+.header-bg{display:none;}
+.btn-lg{display:none;}
+.print-btn{display:none;}
+.btn-red{display:none;}
+.footer-at{display:none;}
+#paymentstep1 #popup2 .border-top{border:none;}
+#paymentstep1 #popup2 .border-car{width:100%;}
+.detail-car{width:25%;float:left;}
+.un-list{width:25%;float:left;}
+.unorder-list li{list-style-type:none;}
+.print-screen{width:50%;display:table;}
+.border-none{display:none;}
+.green{color: #6bd921 ! important; text-transform: uppercase;}
+.card-details{line-height:20px ! important;margin-top:0px! important;}
+#paymentstep1 #popup2 .border-car{margin-bottom:0px ! important;}
+#paymentstep1 .box{border:none;}
+#paymentstep1 .box-heading{border-bottom:1px solid #ddd;}
+#paymentstep1 #popup2 .deatil-view{visibility:visible;}
+#paymentstep1 #popup2 .card-details{width:100%;display:table;}
+}

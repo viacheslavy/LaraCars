@@ -1,0 +1,67 @@
+		#paymentmodel, #successModal, #myModal {font-family:'Oswald', sans-serif;font-weight:300;font-style:normal;outline: medium none;text-shadow: 0px 0px 0px #DE3E15;}
+        .load-modal{
+            display:    none;
+            position:   fixed;
+            z-index:    1000;
+            top:        0;
+            left:       0;
+            height:     100%;
+            width:      100%;
+            background: rgba( 255, 255, 255, .8 ) url('{{asset('/images/loader.gif')}}') 50% 50%  no-repeat;
+        }
+        body.loading{overflow: hidden;}
+        body.loading .load-modal{display: block;}
+
+    /*payment form */
+	.info{font-size:19px;display:table;padding-top:7px;}
+	.pdo{padding:0px;padding-right:25px;}
+	.custom-btn{
+	  padding: 6px 2px 6px 2px;
+	  font-size:15px;
+	  background: #E83014 none repeat scroll 0% 0%;
+	  color: #FFF;
+	  border: 1px solid #E83014;
+	  transition: all 0.2s ease 0s;
+	  font-weight: 300;
+	  outline: medium none;
+	  margin-top: -8px;}
+	.custom-btn:focus{color:#fff;}
+	.custom-btn:hover{color:#fff;background-color:#2a2a2a;border:none;}
+	.icon-custom{
+	     font-size: 20px;
+	    padding-left: 5px;
+	    padding-right:2px;
+	    padding-top:1px;
+	    outline: medium none;
+	    color: #fff;
+	    vertical-align:top;
+	  }
+	.hyber{color:rgb(222, 62, 21);}
+	.hyber:hover{color:rgb(222, 62, 21);}
+	.checkbox-custom{margin-bottom:25px;}
+	.form-line{margin-top:35px;}
+	.date-custom{font-size:15px;}
+	.resize-custom{font-size:14px;}
+	.month-custom{font-size:14px;}
+	.custom-heading{color:#DE3E15;line-height:25px;font-size:16px;}
+	.errorlabel{ color: red;}
+    .error{color: #DE3E15; font-weight: normal; font-size: 14px;}
+    .successlabel{color: #32CD32;}
+    .msg{ padding: 4px; color: red; border: 1px solid red;width:100%;}
+    .modal-resize{ width: 375px; margin: 100px auto; }
+    .modal-body-resize{padding:0px 20px 0px 40px;}
+	#paymentmodel{ overflow-y:scroll; }
+	#offer-tag{position: absolute;vertical-align: middle;float: right;right: 20%;border-radius: 6px;font-size: 18px;line-height: 1.33333;padding: 9px 25px;top: 1.1%;}
+	.zoom-plugin{position:relative;}
+	.single-v
+	{
+		position:absolute;
+		max-height: 200px;
+		overflow: visible;
+		margin-left: 473px;
+		bottom:-20px;
+		-webkit-bottom:-20px;
+		-moz-bottom:-20px;
+		display:block;
+
+	}

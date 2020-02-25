@@ -1,0 +1,35 @@
+* About to connect() to www.google.com port 443 (#0)
+*   Trying 172.217.11.4... * connected
+* Connected to www.google.com (172.217.11.4) port 443 (#0)
+* Initializing NSS with certpath: sql:/etc/pki/nssdb
+*   CAfile: /etc/pki/tls/certs/ca-bundle.crt
+  CApath: none
+* SSL connection using TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256
+* Server certificate:
+* 	subject: CN=www.google.com,O=Google Inc,L=Mountain View,ST=California,C=US
+* 	start date: Nov 01 13:30:00 2017 GMT
+* 	expire date: Jan 24 13:30:00 2018 GMT
+* 	common name: www.google.com
+* 	issuer: CN=Google Internet Authority G2,O=Google Inc,C=US
+> GET / HTTP/1.1
+Host: www.google.com
+Accept: */*
+
+< HTTP/1.1 200 OK
+< Date: Fri, 17 Nov 2017 16:20:49 GMT
+< Expires: -1
+< Cache-Control: private, max-age=0
+< Content-Type: text/html; charset=ISO-8859-1
+< P3P: CP="This is not a P3P policy! See g.co/p3phelp for more info."
+< Server: gws
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: SAMEORIGIN
+< Set-Cookie: 1P_JAR=2017-11-17-16; expires=Sun, 17-Dec-2017 16:20:49 GMT; path=/; domain=.google.com
+< Set-Cookie: NID=117=ALkqfNRiCPb3XVZ9I5nKCqznF2n3bT09rU6Y3UXI4QRfE1ZPMhOmdCQc5E_S-WL_R9GK3NyvcWvCT9WjntsH4VnWD-oEPchyV2surQ1e7wbBsYWwmIGWohAFEPNm8cce; expires=Sat, 19-May-2018 16:20:49 GMT; path=/; domain=.google.com; HttpOnly
+< Alt-Svc: hq=":443"; ma=2592000; quic=51303431; quic=51303339; quic=51303338; quic=51303337; quic=51303335,quic=":443"; ma=2592000; v="41,39,38,37,35"
+< Accept-Ranges: none
+< Vary: Accept-Encoding
+< Transfer-Encoding: chunked
+< 
+* Connection #0 to host www.google.com left intact
+* Closing connection #0

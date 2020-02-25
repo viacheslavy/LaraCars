@@ -1,0 +1,36 @@
+{
+  "data": [
+    {
+      "value": "Antena",
+      "label": "Antena"
+    },
+    {
+      "value": "Auto radio CD/DVD/MP3",
+      "label": "Auto radio CD/DVD/MP3"
+    },
+    {
+      "value": "CD šaržer",
+      "label": "CD šaržer"
+    },
+    {
+      "value": "LCD monitor",
+      "label": "LCD monitor"
+    },
+    {
+      "value": "Navigacija/GPS",
+      "label": "Navigacija/GPS"
+    },
+    {
+      "value": "Pojaèala",
+      "label": "Pojaèala"
+    },
+    {
+      "value": "TV",
+      "label": "TV"
+    },
+    {
+      "value": "Zvuènici",
+      "label": "Zvuènici"
+    }
+  ]
+}

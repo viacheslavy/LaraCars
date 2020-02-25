@@ -1,0 +1,57 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use Illuminate\Http\Request;
+
+use App\Http\Requests;
+use Illuminate\Support\Facades\Mail;
+use Illuminate\Support\Facades\Session;
+
+class MailController extends Controller
+{
+    public function postSendMail(Requests\MailRequest $request) {
+
+        if (!empty($request->get('validator')) && $request->get('validator') == Session::get('rand_code')) {
+            $msg  = "Nom: " . $request->get('name') . "\n\r";
+            $msg .= "Prenom: " . $request->get('lname') . "\n\r";
+            $msg .= "Email: " . $request->get('email') . "\n\r";
+            $msg .= "Telephone: " . $request->get('phone') . "\n\r\n\r";
+            $msg .= "Message: " . $request->get('message') . "\n\r\n\r";
+            $msg .= "Ad Reference: " . $request->get('ad_reference') . "\n\r";
+            $msg .= "Titre De Voiture: " . $request->get('title') . "\n\r";
+            $msg .= "Prix: " . $request->get('price') . "euro \n\r";
+            $msg .= "Prix original: $" . $request->get('original_price') . "\n\r";
+            $msg .= "Lien original: " . $request->get('original_url') . "\n\r";
+            $msg .= "Voir la voiture: " . $request->get('retro_link') . "\n\r";
+
+
+//            [
+//                'contact@fastandretro.com',
+//                'alex.assouline55@gmail.com',
+//                'laky.bulatovic95@gmail.com'
+//            ]
+
+            Mail::raw($msg, function ($m) use ($request) {
+                $m->from('email@example.com', 'Title of email!');
+                $m->to("contact@fastandretro.com")->subject("Demande De Voiture Neuve De " . $request->get('name'));
+            });
+
+
+            if($request->ajax()){
+                return "Votre message a &eacute;t&eacute; envoye!";
+            }
+            // process your form here
+            // at least destroy the session
+            Session::forget('rand_code');
+        } else {
+            if($request->ajax()){
+                return "Captcha is not correct!";
+            }
+
+            return back()->with('message', 'Captcha is not correct!');
+        }
+
+        return back()->with('message', 'Votre message a &eacute;t&eacute; envoye!');
+    }
+}

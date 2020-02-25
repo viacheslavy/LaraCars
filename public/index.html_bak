@@ -1,0 +1,1536 @@
+<!doctype html>
+<html class="no-js" lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <title>Fast & Retro - spécialiste des voitures américaines</title>
+    <meta name="description" content="Passionné depuis plus de 20 ans, nous nous efforçons de trouver le véhicule qui vous convient. Spécialisé dans les voitures anciennes, américaines, muscle cars...">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="apple-touch-icon" href="apple-touch-icon.png">
+    <!-- Place favicon.ico in the root directory -->
+
+    <link rel="stylesheet" href="http://fastandretro.com/fe_assets/css/normalize.css">
+    <link rel="stylesheet" href="http://fastandretro.com/fe_assets/css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="http://fastandretro.com/fe_assets/css/style.css">
+
+    <script src="https://use.fontawesome.com/d3563cba25.js"></script>
+
+    <script src="http://fastandretro.com/fe_assets/js/vendor/modernizr-2.8.3.min.js"></script>
+
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-89864420-1', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+
+</head>
+
+<body>
+<!--[if lt IE 8]>
+<p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+<![endif]-->
+
+<div class="container-fluid header">
+    <div class="header-text text-center">
+        <p><span>1<sup>er</sup></span> Importateur de V&eacute;hicules Am&eacute;ricains</p>
+    </div>
+    <div class="container">
+        <div class="header-contact">
+            <div class="col-xs-12 col-sm-6 header-contact-left">
+                <a id="header-contact-id" href="http://fastandretro.com/contact"><img src="http://fastandretro.com/fe_assets/img/header-contact-hover.png">
+                <img src="http://fastandretro.com/fe_assets/img/header-contact.png" class="headerhover"></a>
+                <a id="header-info-id" href="http://fastandretro.com/contact"><img src="http://fastandretro.com/fe_assets/img/header-info.png">
+                <img src="http://fastandretro.com/fe_assets/img/header-info-hover.png" class="headerhover"></a>
+            </div>
+            <div class="col-xs-12 col-sm-6 header-contact-right">
+                <a href="#">
+                    <span>Appelez-Nous<br></span>
+                    <p>+33 1 80 89 45 45</p>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="header-pic"></div>
+    <div class="header-logo"></div>
+</div>
+<div class="container header-question">
+    <form action="http://fastandretro.com/smallSearch" method="">
+        <div class="col-xs-12">
+            <a href="#">Rechercher un v&eacute;hicule</a>
+            <div class="input-group">
+                <input type="text" name="search" class="form-control" placeholder="">
+                <div class="input-group-btn">
+                    <button class="btn btn-default" type="submit"><i class="glyphicon glyphicon-search"></i></button>
+                </div>
+            </div>
+        </div>
+    </form>
+</div>
+
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li><a href="http://fastandretro.com">ACCUEIL</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Comment &Ccedil;a marche</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="http://fastandretro.com/presentation">Presentation</a></li>
+                        <li><a href="http://fastandretro.com/etape">ETAPE PAR ETAPE</a></li>
+                        <li><a href="http://fastandretro.com/faq">FAQ</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://fastandretro.com/cars">RECHERCHER UN VEHICULE</a></li>
+                <li><a href="http://fastandretro.com/guarantee">NOS GARANTIES</a></li>
+                <li class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="#">Temoignages</a>
+                    <ul class="dropdown-menu">
+                        
+                        <li><a href="http://fastandretro.com/testimonials">TEMOIGNAGES ECRITS</a></li>
+                    </ul>
+                </li>
+                <li><a href="http://fastandretro.com/contact">CONTACTEZ-NOUS</a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container-fluid -->
+</nav>
+
+
+
+    <div class="container-fluid underheader text-center home-carousel">
+        <div class="container">
+                                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                <!-- Indicators -->
+                <ol class="carousel-indicators">
+                    <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+                    <li data-target="#myCarousel" data-slide-to="1"></li>
+                    <li data-target="#myCarousel" data-slide-to="2"></li>
+                    <li data-target="#myCarousel" data-slide-to="3"></li>
+                    <li data-target="#myCarousel" data-slide-to="4"></li>
+                </ol>
+
+                <!-- Wrapper for slides -->
+                <div class="carousel-inner" role="listbox">
+                    <div class="item active">
+                        <img src="http://fastandretro.com/fe_assets/img/home-slide-1.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://fastandretro.com/fe_assets/img/home-slide-2.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://fastandretro.com/fe_assets/img/home-slide-3.png" alt="" class="img-responsive">
+                    </div>
+
+                    <div class="item">
+                        <img src="http://fastandretro.com/fe_assets/img/home-slide-4.png" alt="" class="img-responsive">
+                    </div>
+                    <div class="item">
+                        <img src="http://fastandretro.com/fe_assets/img/home-slide-5.png" alt="" class="img-responsive">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <style type="text/css">
+    .gif-image{float:right;display:block;width:16px;margin-top:-19px;}
+    .select-box{width:110%;}
+</style>
+<div class="container-fluid sorting">
+    <div class="container">
+        <div class="sorting-text-up">
+            <div class="col-xs-12">
+                <h1>Notre catalogue 2017</h1>
+            </div>
+        </div>
+        <hr>
+        <div class="sorting-down">
+            <p>Crit&egrave;re de recherche:</p>
+            <form action="http://fastandretro.com/search" method="GET">
+                <input type="hidden" name="_token" value="Yd15kgLswaWqx4lnABK47x7BGw1j0CCAjKphOHjS">
+                <div class="sorting-down-one">
+                    <p>Marque</p>
+                                        <select id="proizvodjacSearch" name="brand">
+                    <option value="" data-modelcode="00"></option>
+                                                                        <option value="AMC" data-modelcode="150">AMC</option>
+                                                    <option value="Austin-Healey" data-modelcode="141">Austin-Healey</option>
+                                                    <option value="Buick" data-modelcode="136">Buick</option>
+                                                    <option value="Cadillac" data-modelcode="120">Cadillac</option>
+                                                    <option value="Chevrolet" data-modelcode="111">Chevrolet</option>
+                                                    <option value="Chrysler" data-modelcode="143">Chrysler</option>
+                                                    <option value="DeLorean" data-modelcode="138">DeLorean</option>
+                                                    <option value="Dodge" data-modelcode="113">Dodge</option>
+                                                    <option value="Ford" data-modelcode="112">Ford</option>
+                                                    <option value="Jaguar" data-modelcode="116">Jaguar</option>
+                                                    <option value="Jeep" data-modelcode="114">Jeep</option>
+                                                    <option value="Lincoln" data-modelcode="142">Lincoln</option>
+                                                    <option value="Mercedes-Benz" data-modelcode="117">Mercedes-Benz</option>
+                                                    <option value="Mercury" data-modelcode="137">Mercury</option>
+                                                    <option value="MG" data-modelcode="146">MG</option>
+                                                    <option value="Oldsmobile" data-modelcode="135">Oldsmobile</option>
+                                                    <option value="Plymouth" data-modelcode="128">Plymouth</option>
+                                                    <option value="Pontiac" data-modelcode="125">Pontiac</option>
+                                                    <option value="Porsche" data-modelcode="123">Porsche</option>
+                                                    <option value="Rolls-Royce" data-modelcode="124">Rolls-Royce</option>
+                                                    <option value="Triumph" data-modelcode="139">Triumph</option>
+                                                    <option value="Volkswagen" data-modelcode="121">Volkswagen</option>
+                                                
+                    </select>
+                </div>
+                <div class="sorting-down-one">
+                    <p>Mod&egrave;le</p>
+                    <select name="model" id="modelSearch">
+                        <option value=""></option>
+                    </select>
+                    <div id="ajaxLoader" style="display:none" class="select-box">
+                        <img src="http://fastandretro.com/images/ajax-loader.gif" alt="loading..." class="gif-image">
+                    </div>
+                    <input type="hidden" value="" id="selectThisModel">
+                    <input type="hidden" id="model_jsonSearch" value="models/">
+                </div>
+                <div class="sorting-down-one">
+                    <p>Ann&eacute;e min.</p>
+                    <select name="year1">
+                        <option value=""></option>
+                                                2017
+                        1867
+                                                    <option value="2017">2017</option>
+                            2017
+                                                    <option value="2016">2016</option>
+                            2016
+                                                    <option value="2015">2015</option>
+                            2015
+                                                    <option value="2014">2014</option>
+                            2014
+                                                    <option value="2013">2013</option>
+                            2013
+                                                    <option value="2012">2012</option>
+                            2012
+                                                    <option value="2011">2011</option>
+                            2011
+                                                    <option value="2010">2010</option>
+                            2010
+                                                    <option value="2009">2009</option>
+                            2009
+                                                    <option value="2008">2008</option>
+                            2008
+                                                    <option value="2007">2007</option>
+                            2007
+                                                    <option value="2006">2006</option>
+                            2006
+                                                    <option value="2005">2005</option>
+                            2005
+                                                    <option value="2004">2004</option>
+                            2004
+                                                    <option value="2003">2003</option>
+                            2003
+                                                    <option value="2002">2002</option>
+                            2002
+                                                    <option value="2001">2001</option>
+                            2001
+                                                    <option value="2000">2000</option>
+                            2000
+                                                    <option value="1999">1999</option>
+                            1999
+                                                    <option value="1998">1998</option>
+                            1998
+                                                    <option value="1997">1997</option>
+                            1997
+                                                    <option value="1996">1996</option>
+                            1996
+                                                    <option value="1995">1995</option>
+                            1995
+                                                    <option value="1994">1994</option>
+                            1994
+                                                    <option value="1993">1993</option>
+                            1993
+                                                    <option value="1992">1992</option>
+                            1992
+                                                    <option value="1991">1991</option>
+                            1991
+                                                    <option value="1990">1990</option>
+                            1990
+                                                    <option value="1989">1989</option>
+                            1989
+                                                    <option value="1988">1988</option>
+                            1988
+                                                    <option value="1987">1987</option>
+                            1987
+                                                    <option value="1986">1986</option>
+                            1986
+                                                    <option value="1985">1985</option>
+                            1985
+                                                    <option value="1984">1984</option>
+                            1984
+                                                    <option value="1983">1983</option>
+                            1983
+                                                    <option value="1982">1982</option>
+                            1982
+                                                    <option value="1981">1981</option>
+                            1981
+                                                    <option value="1980">1980</option>
+                            1980
+                                                    <option value="1979">1979</option>
+                            1979
+                                                    <option value="1978">1978</option>
+                            1978
+                                                    <option value="1977">1977</option>
+                            1977
+                                                    <option value="1976">1976</option>
+                            1976
+                                                    <option value="1975">1975</option>
+                            1975
+                                                    <option value="1974">1974</option>
+                            1974
+                                                    <option value="1973">1973</option>
+                            1973
+                                                    <option value="1972">1972</option>
+                            1972
+                                                    <option value="1971">1971</option>
+                            1971
+                                                    <option value="1970">1970</option>
+                            1970
+                                                    <option value="1969">1969</option>
+                            1969
+                                                    <option value="1968">1968</option>
+                            1968
+                                                    <option value="1967">1967</option>
+                            1967
+                                                    <option value="1966">1966</option>
+                            1966
+                                                    <option value="1965">1965</option>
+                            1965
+                                                    <option value="1964">1964</option>
+                            1964
+                                                    <option value="1963">1963</option>
+                            1963
+                                                    <option value="1962">1962</option>
+                            1962
+                                                    <option value="1961">1961</option>
+                            1961
+                                                    <option value="1960">1960</option>
+                            1960
+                                                    <option value="1959">1959</option>
+                            1959
+                                                    <option value="1958">1958</option>
+                            1958
+                                                    <option value="1957">1957</option>
+                            1957
+                                                    <option value="1956">1956</option>
+                            1956
+                                                    <option value="1955">1955</option>
+                            1955
+                                                    <option value="1954">1954</option>
+                            1954
+                                                    <option value="1953">1953</option>
+                            1953
+                                                    <option value="1952">1952</option>
+                            1952
+                                                    <option value="1951">1951</option>
+                            1951
+                                                    <option value="1950">1950</option>
+                            1950
+                                                    <option value="1949">1949</option>
+                            1949
+                                                    <option value="1948">1948</option>
+                            1948
+                                                    <option value="1947">1947</option>
+                            1947
+                                                    <option value="1946">1946</option>
+                            1946
+                                                    <option value="1945">1945</option>
+                            1945
+                                                    <option value="1944">1944</option>
+                            1944
+                                                    <option value="1943">1943</option>
+                            1943
+                                                    <option value="1942">1942</option>
+                            1942
+                                                    <option value="1941">1941</option>
+                            1941
+                                                    <option value="1940">1940</option>
+                            1940
+                                                    <option value="1939">1939</option>
+                            1939
+                                                    <option value="1938">1938</option>
+                            1938
+                                                    <option value="1937">1937</option>
+                            1937
+                                                    <option value="1936">1936</option>
+                            1936
+                                                    <option value="1935">1935</option>
+                            1935
+                                                    <option value="1934">1934</option>
+                            1934
+                                                    <option value="1933">1933</option>
+                            1933
+                                                    <option value="1932">1932</option>
+                            1932
+                                                    <option value="1931">1931</option>
+                            1931
+                                                    <option value="1930">1930</option>
+                            1930
+                                                    <option value="1929">1929</option>
+                            1929
+                                                    <option value="1928">1928</option>
+                            1928
+                                                    <option value="1927">1927</option>
+                            1927
+                                                    <option value="1926">1926</option>
+                            1926
+                                                    <option value="1925">1925</option>
+                            1925
+                                                    <option value="1924">1924</option>
+                            1924
+                                                    <option value="1923">1923</option>
+                            1923
+                                                    <option value="1922">1922</option>
+                            1922
+                                                    <option value="1921">1921</option>
+                            1921
+                                                    <option value="1920">1920</option>
+                            1920
+                                                    <option value="1919">1919</option>
+                            1919
+                                                    <option value="1918">1918</option>
+                            1918
+                                                    <option value="1917">1917</option>
+                            1917
+                                                    <option value="1916">1916</option>
+                            1916
+                                                    <option value="1915">1915</option>
+                            1915
+                                                    <option value="1914">1914</option>
+                            1914
+                                                    <option value="1913">1913</option>
+                            1913
+                                                    <option value="1912">1912</option>
+                            1912
+                                                    <option value="1911">1911</option>
+                            1911
+                                                    <option value="1910">1910</option>
+                            1910
+                                                    <option value="1909">1909</option>
+                            1909
+                                                    <option value="1908">1908</option>
+                            1908
+                                                    <option value="1907">1907</option>
+                            1907
+                                                    <option value="1906">1906</option>
+                            1906
+                                                    <option value="1905">1905</option>
+                            1905
+                                                    <option value="1904">1904</option>
+                            1904
+                                                    <option value="1903">1903</option>
+                            1903
+                                                    <option value="1902">1902</option>
+                            1902
+                                                    <option value="1901">1901</option>
+                            1901
+                                                    <option value="1900">1900</option>
+                            1900
+                                                    <option value="1899">1899</option>
+                            1899
+                                                    <option value="1898">1898</option>
+                            1898
+                                                    <option value="1897">1897</option>
+                            1897
+                                                    <option value="1896">1896</option>
+                            1896
+                                                    <option value="1895">1895</option>
+                            1895
+                                                    <option value="1894">1894</option>
+                            1894
+                                                    <option value="1893">1893</option>
+                            1893
+                                                    <option value="1892">1892</option>
+                            1892
+                                                    <option value="1891">1891</option>
+                            1891
+                                                    <option value="1890">1890</option>
+                            1890
+                                                    <option value="1889">1889</option>
+                            1889
+                                                    <option value="1888">1888</option>
+                            1888
+                                                    <option value="1887">1887</option>
+                            1887
+                                                    <option value="1886">1886</option>
+                            1886
+                                                    <option value="1885">1885</option>
+                            1885
+                                                    <option value="1884">1884</option>
+                            1884
+                                                    <option value="1883">1883</option>
+                            1883
+                                                    <option value="1882">1882</option>
+                            1882
+                                                    <option value="1881">1881</option>
+                            1881
+                                                    <option value="1880">1880</option>
+                            1880
+                                                    <option value="1879">1879</option>
+                            1879
+                                                    <option value="1878">1878</option>
+                            1878
+                                                    <option value="1877">1877</option>
+                            1877
+                                                    <option value="1876">1876</option>
+                            1876
+                                                    <option value="1875">1875</option>
+                            1875
+                                                    <option value="1874">1874</option>
+                            1874
+                                                    <option value="1873">1873</option>
+                            1873
+                                                    <option value="1872">1872</option>
+                            1872
+                                                    <option value="1871">1871</option>
+                            1871
+                                                    <option value="1870">1870</option>
+                            1870
+                                                    <option value="1869">1869</option>
+                            1869
+                                                    <option value="1868">1868</option>
+                            1868
+                                            </select>
+                </div>
+                <div class="sorting-down-one">
+                    <p>Ann&eacute;e max.</p>
+                    <select name="year2">
+                        <option value=""></option>
+
+                                                2017
+                        1867
+                                                    <option value="2017">2017</option>
+                            2017
+                                                    <option value="2016">2016</option>
+                            2016
+                                                    <option value="2015">2015</option>
+                            2015
+                                                    <option value="2014">2014</option>
+                            2014
+                                                    <option value="2013">2013</option>
+                            2013
+                                                    <option value="2012">2012</option>
+                            2012
+                                                    <option value="2011">2011</option>
+                            2011
+                                                    <option value="2010">2010</option>
+                            2010
+                                                    <option value="2009">2009</option>
+                            2009
+                                                    <option value="2008">2008</option>
+                            2008
+                                                    <option value="2007">2007</option>
+                            2007
+                                                    <option value="2006">2006</option>
+                            2006
+                                                    <option value="2005">2005</option>
+                            2005
+                                                    <option value="2004">2004</option>
+                            2004
+                                                    <option value="2003">2003</option>
+                            2003
+                                                    <option value="2002">2002</option>
+                            2002
+                                                    <option value="2001">2001</option>
+                            2001
+                                                    <option value="2000">2000</option>
+                            2000
+                                                    <option value="1999">1999</option>
+                            1999
+                                                    <option value="1998">1998</option>
+                            1998
+                                                    <option value="1997">1997</option>
+                            1997
+                                                    <option value="1996">1996</option>
+                            1996
+                                                    <option value="1995">1995</option>
+                            1995
+                                                    <option value="1994">1994</option>
+                            1994
+                                                    <option value="1993">1993</option>
+                            1993
+                                                    <option value="1992">1992</option>
+                            1992
+                                                    <option value="1991">1991</option>
+                            1991
+                                                    <option value="1990">1990</option>
+                            1990
+                                                    <option value="1989">1989</option>
+                            1989
+                                                    <option value="1988">1988</option>
+                            1988
+                                                    <option value="1987">1987</option>
+                            1987
+                                                    <option value="1986">1986</option>
+                            1986
+                                                    <option value="1985">1985</option>
+                            1985
+                                                    <option value="1984">1984</option>
+                            1984
+                                                    <option value="1983">1983</option>
+                            1983
+                                                    <option value="1982">1982</option>
+                            1982
+                                                    <option value="1981">1981</option>
+                            1981
+                                                    <option value="1980">1980</option>
+                            1980
+                                                    <option value="1979">1979</option>
+                            1979
+                                                    <option value="1978">1978</option>
+                            1978
+                                                    <option value="1977">1977</option>
+                            1977
+                                                    <option value="1976">1976</option>
+                            1976
+                                                    <option value="1975">1975</option>
+                            1975
+                                                    <option value="1974">1974</option>
+                            1974
+                                                    <option value="1973">1973</option>
+                            1973
+                                                    <option value="1972">1972</option>
+                            1972
+                                                    <option value="1971">1971</option>
+                            1971
+                                                    <option value="1970">1970</option>
+                            1970
+                                                    <option value="1969">1969</option>
+                            1969
+                                                    <option value="1968">1968</option>
+                            1968
+                                                    <option value="1967">1967</option>
+                            1967
+                                                    <option value="1966">1966</option>
+                            1966
+                                                    <option value="1965">1965</option>
+                            1965
+                                                    <option value="1964">1964</option>
+                            1964
+                                                    <option value="1963">1963</option>
+                            1963
+                                                    <option value="1962">1962</option>
+                            1962
+                                                    <option value="1961">1961</option>
+                            1961
+                                                    <option value="1960">1960</option>
+                            1960
+                                                    <option value="1959">1959</option>
+                            1959
+                                                    <option value="1958">1958</option>
+                            1958
+                                                    <option value="1957">1957</option>
+                            1957
+                                                    <option value="1956">1956</option>
+                            1956
+                                                    <option value="1955">1955</option>
+                            1955
+                                                    <option value="1954">1954</option>
+                            1954
+                                                    <option value="1953">1953</option>
+                            1953
+                                                    <option value="1952">1952</option>
+                            1952
+                                                    <option value="1951">1951</option>
+                            1951
+                                                    <option value="1950">1950</option>
+                            1950
+                                                    <option value="1949">1949</option>
+                            1949
+                                                    <option value="1948">1948</option>
+                            1948
+                                                    <option value="1947">1947</option>
+                            1947
+                                                    <option value="1946">1946</option>
+                            1946
+                                                    <option value="1945">1945</option>
+                            1945
+                                                    <option value="1944">1944</option>
+                            1944
+                                                    <option value="1943">1943</option>
+                            1943
+                                                    <option value="1942">1942</option>
+                            1942
+                                                    <option value="1941">1941</option>
+                            1941
+                                                    <option value="1940">1940</option>
+                            1940
+                                                    <option value="1939">1939</option>
+                            1939
+                                                    <option value="1938">1938</option>
+                            1938
+                                                    <option value="1937">1937</option>
+                            1937
+                                                    <option value="1936">1936</option>
+                            1936
+                                                    <option value="1935">1935</option>
+                            1935
+                                                    <option value="1934">1934</option>
+                            1934
+                                                    <option value="1933">1933</option>
+                            1933
+                                                    <option value="1932">1932</option>
+                            1932
+                                                    <option value="1931">1931</option>
+                            1931
+                                                    <option value="1930">1930</option>
+                            1930
+                                                    <option value="1929">1929</option>
+                            1929
+                                                    <option value="1928">1928</option>
+                            1928
+                                                    <option value="1927">1927</option>
+                            1927
+                                                    <option value="1926">1926</option>
+                            1926
+                                                    <option value="1925">1925</option>
+                            1925
+                                                    <option value="1924">1924</option>
+                            1924
+                                                    <option value="1923">1923</option>
+                            1923
+                                                    <option value="1922">1922</option>
+                            1922
+                                                    <option value="1921">1921</option>
+                            1921
+                                                    <option value="1920">1920</option>
+                            1920
+                                                    <option value="1919">1919</option>
+                            1919
+                                                    <option value="1918">1918</option>
+                            1918
+                                                    <option value="1917">1917</option>
+                            1917
+                                                    <option value="1916">1916</option>
+                            1916
+                                                    <option value="1915">1915</option>
+                            1915
+                                                    <option value="1914">1914</option>
+                            1914
+                                                    <option value="1913">1913</option>
+                            1913
+                                                    <option value="1912">1912</option>
+                            1912
+                                                    <option value="1911">1911</option>
+                            1911
+                                                    <option value="1910">1910</option>
+                            1910
+                                                    <option value="1909">1909</option>
+                            1909
+                                                    <option value="1908">1908</option>
+                            1908
+                                                    <option value="1907">1907</option>
+                            1907
+                                                    <option value="1906">1906</option>
+                            1906
+                                                    <option value="1905">1905</option>
+                            1905
+                                                    <option value="1904">1904</option>
+                            1904
+                                                    <option value="1903">1903</option>
+                            1903
+                                                    <option value="1902">1902</option>
+                            1902
+                                                    <option value="1901">1901</option>
+                            1901
+                                                    <option value="1900">1900</option>
+                            1900
+                                                    <option value="1899">1899</option>
+                            1899
+                                                    <option value="1898">1898</option>
+                            1898
+                                                    <option value="1897">1897</option>
+                            1897
+                                                    <option value="1896">1896</option>
+                            1896
+                                                    <option value="1895">1895</option>
+                            1895
+                                                    <option value="1894">1894</option>
+                            1894
+                                                    <option value="1893">1893</option>
+                            1893
+                                                    <option value="1892">1892</option>
+                            1892
+                                                    <option value="1891">1891</option>
+                            1891
+                                                    <option value="1890">1890</option>
+                            1890
+                                                    <option value="1889">1889</option>
+                            1889
+                                                    <option value="1888">1888</option>
+                            1888
+                                                    <option value="1887">1887</option>
+                            1887
+                                                    <option value="1886">1886</option>
+                            1886
+                                                    <option value="1885">1885</option>
+                            1885
+                                                    <option value="1884">1884</option>
+                            1884
+                                                    <option value="1883">1883</option>
+                            1883
+                                                    <option value="1882">1882</option>
+                            1882
+                                                    <option value="1881">1881</option>
+                            1881
+                                                    <option value="1880">1880</option>
+                            1880
+                                                    <option value="1879">1879</option>
+                            1879
+                                                    <option value="1878">1878</option>
+                            1878
+                                                    <option value="1877">1877</option>
+                            1877
+                                                    <option value="1876">1876</option>
+                            1876
+                                                    <option value="1875">1875</option>
+                            1875
+                                                    <option value="1874">1874</option>
+                            1874
+                                                    <option value="1873">1873</option>
+                            1873
+                                                    <option value="1872">1872</option>
+                            1872
+                                                    <option value="1871">1871</option>
+                            1871
+                                                    <option value="1870">1870</option>
+                            1870
+                                                    <option value="1869">1869</option>
+                            1869
+                                                    <option value="1868">1868</option>
+                            1868
+                                            </select>
+                </div>
+                <div class="sortit-small">
+                    <p>&nbsp;</p>
+                    <select name="sortby">
+                        <option value="" selected="" disabled="">Triez par</option>
+                        <option value="price|asc">Prix: plus bas</option>
+                        <option value="price|desc">Prix: plus haut</option>
+                        <option value="mileage|asc">Kilom&egrave;tres: plus bas</option>
+                        <option value="mileage|desc">Kilom&egrave;tres: plus haut</option>
+                        <option value="year|asc">Ann&eacute;e: plus bas</option>
+                        <option value="year|desc">Ann&eacute;e: plus haut</option>
+                    </select>
+                </div>
+                <button class="search-btn">Rechercher</button>
+                            </form>
+        </div>
+    </div>
+</div>
+
+    <div class="container-fluid home">
+        <div class="container productsingle">
+            <div class="col-xs-12 col-sm-4 col-md-3 productsingle-sidebar-parent home-left">
+<!--
+                <div class="dropdown-brand">
+                    <div class="dropdown">
+                        <a href="#" type="button" data-toggle="dropdown"><img src="http://fastandretro.com/fe_assets/img/home-sidebar-brand.png"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="dropdown-brand">
+                    <div class="dropdown">
+                        <a href="#" type="button" data-toggle="dropdown"><img src="http://fastandretro.com/fe_assets/img/home-sidebar-year.png"></a>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">Coming Soon</a></li>
+                        </ul>
+                    </div>
+                </div>
+-->
+                <div class="sidebar-dropdown">
+                    <a href="http://fastandretro.com/cars">
+                        <img src="http://fastandretro.com/fe_assets/img/homerecardz.png">
+                    </a>
+                </div>
+                <div class="sidebar-divider">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+
+<!--
+                <div class="sidebar-product">
+                    <img src="http://fastandretro.com/fe_assets/img/home-sidebar-product.png">
+                    <hr>
+                    <a href="#">
+                        <img src="http://fastandretro.com/fe_assets/img/home-sidebar-product-pic.png">
+                    </a>
+                    <h3><span>1950</span> Ford ........  <span>60 000 $</span></h3>
+                    <a href="#" class="sidebar-product-btn">En Savoir Plus</a>
+                </div>
+-->
+                <div class="sidebar-product-one-parent">
+                    <div class="sidebar-product">
+                    <img src="http://fastandretro.com/fe_assets/img/home-sidebar-product.png">
+                    <hr>
+                </div>
+
+                 
+                    <div class="product-one sidebar-product-one" style="height: 315px;">
+                        <div style="height: 170px; overflow: hidden">
+
+                       
+                                                            
+                                    <img src="http://www.fastandretro.com/uploads/thumb/Screen Shot 2017-06-30 at 11.28.38 AM_1498847995.jpg">
+                                                                
+                        </div>
+
+                        <div class="product-one-text">
+                            <div class="product-one-left">
+                                
+                                <h2>Ford Mustang</h2>
+                            </div>
+                            <div class="product-one-right">
+                                <span>
+
+                                    
+                                    <!-- 36000,00 &euro; -->
+                                    26000,00 &euro;
+                                </span>
+                            </div>
+                            <a href="http://fastandretro.com/product/10395">
+                                <p><i class="fa fa-caret-right" aria-hidden="true"></i> Voir d&eacute;tails</p>
+                            </a>
+                        </div>
+                    </div>
+
+                                          
+
+                    </div>
+
+
+
+                <div class="sidebar-divider">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+
+
+                <div class="productsingle-sidebar">
+                    <div class="productsingle-guarantee">
+                        <div class="productsingle-guarantee-child">
+                            <img src="http://fastandretro.com/fe_assets/img/guarantees.png" class="productsingle-guarantee-img">
+                            <p><img src="http://fastandretro.com/fe_assets/img/check.png"> Accueil personnalis&eacute;</p>
+                            <p>..........................</p>
+                            <p><img src="http://fastandretro.com/fe_assets/img/check.png"> Prix int&eacute;ressant</p>
+                            <p>..........................</p>
+                            <p><img src="http://fastandretro.com/fe_assets/img/check.png"> <span>Prise en charge <br>des contraintes administratives</span></p>
+                            <p>..........................</p>
+                            <p><img src="http://fastandretro.com/fe_assets/img/check.png"> Examen minutieux <br>et contr&ocirc;le de qualit&eacute;</p>
+                            <p>..........................</p>
+                            <p><img src="http://fastandretro.com/fe_assets/img/check.png"> S&eacute;lection rigoureuse <br>du v&eacute;hicule</p>
+                            <p>..........................</p>
+                            <img src="http://fastandretro.com/fe_assets/img/productsingle-guranatees-logo.png">
+                        </div>
+                    </div>
+                    <div class="sidebar-divider">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-6 home-middle-parent">
+                <div class="home-middle">
+                    <img src="http://fastandretro.com/fe_assets/img/home-headline.png">
+                    <p>Fast &amp; Retro vous offre une large sélection de voitures américaines classiques, de collection et muscle cars.<br><br> Nous avons plus de 1000 annonces pour des voitures classiques et de collection, parmi les marques les plus populaires. <br><br> Chaque véhicule provenant de notre réseau est entièrement inspecté par un expert indépendant avant achat et livraison. Votre véhicule vous est donc livré après un contrôle technique et avec tous les documents nécessaires en règle. <br><br> Fast & Retro privilégie des relations durables avec des entreprises de distribution automobile, les mieux notées à travers le monde afin de vous assurer une livraison rapide et fiable de votre véhicule de collection. <br><br> Nous travaillons directement avec les compagnies maritimes pour s’assurer que toutes les formalités administratives et logistiques soient gérées directement, avec un coût minime et sans tracas pour vous.</p>
+                    <h2>Notre charte de qualité </h2>
+                    <p>Fast &amp; Retro fournit une garantie de qualité sur toutes les voitures à vendre. Les véhicules subissent une inspection minutieuse réalisée par une équipe de mécaniciens hautement qualifiés. <br><br>Nous offrons seulement le meilleur des muscle cars, voitures classiques et hot rods ; c’est pourquoi nous embauchons un inspecteur indépendant avant d’acheter votre véhicule. <br><br>En outre, nous nous engageons à fournir un service de qualité supérieur à nos clients. Notre équipe de passionnés est disponible pour répondre au mieux à toutes vos questions. 
+                        <span>The Fast &amp; Retro Team</span> </p>
+                </div>
+            </div>
+            <div class="col-xs-12 col-sm-4 col-md-3 home-right">
+                <div class="productsingle-subscribe">
+                    <img src="http://fastandretro.com/fe_assets/img/productsingle-left-subscribe.png">
+                    <img src="http://fastandretro.com/fe_assets/img/home-sidebar-subscribe.png">
+                    <div class="subscribe-bckg">
+                        <h2>Cr&eacute;ez un compte en <span>3</span> clics</h2>
+                        <form id="subscribeForm" action="http://fastandretro.com/addCustomer" class="form-horizontal allForms" method="post" data-parsley-validate="">
+    <input type="hidden" name="_token" value="Yd15kgLswaWqx4lnABK47x7BGw1j0CCAjKphOHjS">
+    <fieldset>
+        <div class="col-xs-12 col-md-offset-2 col-md-8 contact-c-inputs">
+            <div class="form-group">
+                <p>1. Entrez votre Email</p>
+                <input id="email" name="email" type="text" class="form-control" data-parsley-required-message="E-mail obligatoire" data-parsley-trigger="change focusout" required="" data-parsley-type="email">
+            </div>
+            <!--
+                                                <div class="form-group">
+                                                    <p>2. Entrez votre mot de passe</p>
+                                                    <input id="lname" name="lname" type="text" class="form-control">
+                                                </div>
+            -->
+            <div class="form-group">
+                <p>2. Nom et pr&eacute;nom</p>
+                <input id="name" name="name" type="text" class="form-control" data-parsley-required-message="Nom obligatoire" data-parsley-trigger="change focusout" required="">
+            </div>
+            <!--
+                                                <div class="form-group">
+                                                    <p>4. Re-entrez votre mot de passe</p>
+                                                    <input id="lname" name="lname" type="text" class="form-control">
+                                                </div>
+            -->
+
+            <div class="form-group btn-wrap">
+                <button id="contactSubmit" type="submit" class="btn btncta">Envoyer</button>
+            </div>
+        </div>
+    </fieldset>
+</form>
+
+<div id="subscribeModalAlert" class="modal fade" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal"><img src="http://fastandretro.com/fe_assets/img/closewindows.png"></button>
+            </div>
+            <div class="modal-body">
+                <div class="alert alert-success">
+                    <p>Merci de vous etre abonne</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>                    </div>
+                </div>
+                <div class="sidebar-divider">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+                <div class="sidebar-calendar">
+                    <a href="#" data-toggle="modal" data-target="#modalCalendar"><img src="http://fastandretro.com/fe_assets/img/home-sidebar-calendar.png"></a>
+                    <p><a href="#" data-toggle="modal" data-target="#modalCalendar">Cliquez ici</a> pour t&eacute;l&eacute;charger notre calendrier au format PDF.</p>
+                </div>
+                <div class="sidebar-divider">
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                    <i class="fa fa-star" aria-hidden="true"></i>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <div class="container-fluid productsingle-footer-parent home-footer">
+        <img src="http://fastandretro.com/fe_assets/img/home-retro-logo.png" class="home-footer-logo">
+        <div class="container productsingle-footer">
+            <div class="productsingle-footer-head">
+                <h2>NoS Derniers Arrivages</h2>
+                <hr>
+            </div>
+
+            
+            <div class="carousel-inner2" role="listbox">
+
+                
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15078">
+                            
+                            <p>Ford Mustang ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/thumb/Screen Shot 2017-09-15 at 9.12.00 AM_1505491993.png">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15078" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15077">
+                            
+                            <p>1986 Mercedes-Benz 560SL Ro ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/60229507-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15077" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15076">
+                            
+                            <p>1976 Mercedes-Benz 450SL Ha ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/60355797-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15076" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15075">
+                            
+                            <p>1979 Mercedes-Benz 450SL Co ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/60355728-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15075" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15073">
+                            
+                            <p>1968 Mercedes-Benz 280SL 2- ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/60144256-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15073" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15072">
+                            
+                            <p>1981 Mercedes-Benz 380SL Co ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/60312328-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15072" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15070">
+                            
+                            <p>1977 Mercedes-Benz 450SL 45 ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/58409455-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15070" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15068">
+                            
+                            <p>1969 Mercedes-Benz 280SL fo ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/59226021-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15068" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15066">
+                            
+                            <p>1985 Mercedes-Benz 380SL Tw ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/58409785-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15066" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                    
+                    <div class="productsingle-footer-one slide">
+                        <a href="http://fastandretro.com/product/15065">
+                            
+                            <p>1976 Mercedes-Benz 450SL fo ...</p>
+                        </a>
+                        <div style="max-height: 146px; overflow: hidden">
+                                                                                        
+                                                                                                                        <img src="http://fastandretro.com/uploads/60355866-770-0@2X.jpg">
+                                        
+                                                                                
+                                                                                    </div>
+                        <a href="http://fastandretro.com/product/15065" class="search-btn">En savoir plus</a>
+                    </div>
+
+                                                </div>
+
+
+        </div>
+    </div>
+<div id="modalCalendar" class="modal fade in" role="dialog">
+    <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" id="closeMeLol"><img src="http://fastandretro.com/fe_assets/img/closewindows.png"></button>
+            </div>
+            <div class="modal-body">
+                <div class="modal-calendar">
+                    <img src="http://fastandretro.com/fe_assets/img/home-sidebar-calendar.png">
+                    <div class="sidebar-divider">
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                        <i class="fa fa-star" aria-hidden="true"></i>
+                    </div>
+
+                    <div class="contact-form">
+                        <form id="subscribeForm2" action="http://fastandretro.com/addCustomer" class="form-horizontal allForms putErrorsRed" method="post" data-parsley-validate="" novalidate="">
+                            <input type="hidden" name="_token" value="Yd15kgLswaWqx4lnABK47x7BGw1j0CCAjKphOHjS">
+                            <fieldset>
+                                <div class="col-xs-12 contact-c-inputs">
+                                    <div class="form-group">
+                                        <input id="name" name="name" type="text" class="form-control" placeholder="Nom *" data-parsley-required-message="Nom obligatoire" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="email" type="text" class="form-control" placeholder="Email *" data-parsley-required-message="E-mail obligatoire" data-parsley-trigger="change focusout" required="" data-parsley-type="email">
+                                    </div>
+                                    <div class="form-group">
+                                        <input id="lname" name="phone" type="number" class="form-control" placeholder="T&eacute;l&eacute;phone *" data-parsley-required-message="T&eacute;l&eacute;phone requis" data-parsley-trigger="change focusout" required="">
+                                    </div>
+                                    <div class="form-group">
+                                        <button type="submit" class="search-btn">Envoyer </button>
+                                    </div>
+                                </div>
+                            </fieldset>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+
+
+<div class="container-fluid footer">
+    <div class="container">
+        <div class="col-xs-12 col-md-4 footer-one">
+            <h2>CONSTRUCTEURS<br><span>Am&eacute;ricains</span></h2>
+            <div class="footer-one-child">
+                <img src="http://fastandretro.com/fe_assets/img/footer-pic-1.png">
+                <div class="footer-one-child-right">
+                    <p><a href="http://fastandretro.com/search?brand=A M C">A M C</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Buick">Buick</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Lincoln">Lincoln</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Cadillac">Cadillac</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Mercury">Mercury</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Chevrolet">Chevrolet</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Oldsmobile">Oldsmobile</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Chrysler">Chrysler</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Packard">Packard</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=DeLorean">DeLorean</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Plymouth">Plymouth</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Dodge">Dodge</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Pontiac">Pontiac</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Ford">Ford</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Shelby">Shelby ...</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 footer-one footer-middle">
+            <h2>NOS MODELES<br><span>les plus populaires</span></h2>
+            <div class="footer-one-child">
+                <img src="http://fastandretro.com/fe_assets/img/footer-pic-2.png">
+                <div class="footer-one-child-right">
+                    <p><a href="http://fastandretro.com/search?brand=Ford&model=Mustang">Ford Mustang</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Chevrolet&model=Corvette">Chevrolet Corvette</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Chevrolet&model=Camaro">Chevrolet Camaro</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Jeep&model=CJ">Jeep CJ</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Ford&model=Model A">Ford Model A</a></p>
+                    <p><a href="http://fastandretro.com/search?brand=Chevrolet&model=Chevelle">Chevrolet Chevelle</a></p>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-md-4 footer-one footer-one-social">
+            <h2>RETROUVEZ-NOUS<br><span>sur les r&eacute;seaux sociaux</span></h2>
+            <div class="share-social">
+                <a href="#" class="sfirst"><img src="http://fastandretro.com/fe_assets/img/social-gp.png"></a>
+                <a href="#" class="ssecond"><img src="http://fastandretro.com/fe_assets/img/social-fb.png"></a>
+                <a href="#" class="sthird"><img src="http://fastandretro.com/fe_assets/img/social-tw.png"></a>
+                <a href="#" class="sfourth"><img src="http://fastandretro.com/fe_assets/img/social-pin.png"></a>
+                <a href="#" class="sfivth"><img src="http://fastandretro.com/fe_assets/img/social-map.png"></a>
+                <a href="#" class="ssixth"><img src="http://fastandretro.com/fe_assets/img/social-li.png"></a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid ftr-menu">
+    <div class="container">
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <i class="fa fa-star" aria-hidden="true"></i>
+                <li><a href="http://fastandretro.com/presentation">Comment &Ccedil;a marche</a></li>
+                <li><a href="http://fastandretro.com/cars">RECHERCHER UN V&Egrave;HICULE</a></li>
+                <li><a href="http://fastandretro.com/guarantee">NOS GARANTIES</a></li>
+                <li><a href="http://fastandretro.com/legals">Mentions legales</a></li>
+
+                <li><a href="http://fastandretro.com/sitemap.xml">Plan du site</a></li>
+                <li><a href="http://fastandretro.com/contact">CONTACTEZ-NOUS</a></li>
+                <i class="fa fa-star" aria-hidden="true"></i>
+            </ul>
+        </div>
+    </div>
+</div>
+<div class="container-fluid copyright">
+    <div class="col-xs-12 text-center">
+        <p>2017 &copy; Copyright Fast & Retro</p>
+    </div>
+</div>
+
+<!-- Modal -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+<script>
+    window.jQuery || document.write('<script src="http://fastandretro.com/fe_assets/js/vendor/jquery-1.12.0.min.js"><\/script>')
+</script>
+
+<script src="http://fastandretro.com/jquery.bxslider.js"></script>
+
+
+<script src="http://fastandretro.com/fe_assets/js/plugins.js"></script>
+<script src="http://fastandretro.com/fe_assets/js/main.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="http://fastandretro.com/js/proizvodjacModel.js"></script>
+<script src="http://fastandretro.com/js/jquery.zoom.js"></script>
+
+
+<link rel="stylesheet" href="http://fastandretro.com/fixSlider.css">
+
+<script>
+    jQuery(document).ready(function($) {
+
+        $('#myCarousel2').carousel({
+            interval: false
+        });
+
+        $('#carousel-text').html($('#slide-content-0').html());
+
+        //Handles the carousel thumbnails
+        $('[id^=carousel-selector-]').click( function(){
+            var id = this.id.substr(this.id.lastIndexOf("-") + 1);
+            var id = parseInt(id);
+            $('#myCarousel2').carousel(id);
+        });
+
+
+        // When the carousel slides, auto update the text
+        $('#myCarousel2').on('slid.bs.carousel', function (e) {
+            var id = $('.item.active').data('slide-number');
+            $('#carousel-text').html($('#slide-content-'+id).html());
+        });
+
+
+      /*  $(".zoomImage").elevateZoom({
+            zoomType	: "lens",
+            lensShape : "round",
+            lensSize    : 300
+        });*/
+
+        $(document).ready(function(){
+            $('.zoom').zoom(); 
+            $('.zoomfull').wrap('<span style="display:block"></span>').css('display', 'block').parent().zoom();
+        });
+
+        var form = $('#modal1Form');
+        ajaxFormSubmit(form);
+
+        var form2 = $("#modal2Form");
+        ajaxFormSubmit(form2);
+
+        var form3 = $("#modal3Form");
+        ajaxFormSubmit(form3);
+
+        var form4 = $("#modal4Form");
+        ajaxFormSubmit(form4);
+
+
+
+        var subsForm = $("#subscribeForm");
+
+        subsForm.submit(function(e) {
+            e.preventDefault();
+
+            subsForm.parsley().validate();
+
+            if (subsForm.parsley().isValid()) {
+
+                $.ajax({
+                    type: "POST",
+                    url: subsForm.attr( 'action' ),
+                    data: subsForm.serialize(),
+                    success: function( response ) {
+                        $('#subscribeModalAlert').modal('show');
+                        $(".modal-backdrop.in").hide();
+                    }
+                });
+            }
+        });
+
+
+        $("#subscribeForm2").submit(function(e) {
+            e.preventDefault();
+
+            $("#subscribeForm2").parsley().validate();
+
+            if ($("#subscribeForm2").parsley().isValid()) {
+
+                $.ajax({
+                    type: "POST",
+                    url: $("#subscribeForm2").attr( 'action' ),
+                    data: $("#subscribeForm2").serialize(),
+                    success: function( response ) {
+                        $("#closeMeLol").trigger('click');
+                        $('#subscribeModalAlert').modal('show');
+                        $(".modal-backdrop.in").hide();
+                    }
+                });
+            }
+        });
+
+        $('#myCarousel2').carousel({
+            interval: 1000
+        });
+
+
+
+    });
+
+     $(document).ready(function(e){
+        $('.carousel-inner2').bxSlider({
+            slideWidth: 300,
+            minSlides: 1,
+            speed: 2000,
+            maxSlides: 5,
+            moveSlides: 1,
+            slideMargin: 0,
+            controls: false,
+            autoHover: true,
+            pause: 0,
+            auto:true,
+            autoStart: true
+        });
+    });
+
+
+
+   
+    function ajaxFormSubmit(form) {
+        form.submit(function(e) {
+            e.preventDefault();
+
+            $(".removeMeInit").remove();
+            var formID = form.attr('id');
+
+            form.parsley().validate();
+
+            if (form.parsley().isValid()) {
+                $("#" + formID + " button").hide();
+
+                $.ajax({
+                    type: "POST",
+                    url: form.attr( 'action' ),
+                    data: form.serialize(),
+                    success: function( response ) {
+                        form.append("<div class='alert alert-success removeMeInit'>" + response + "</div>");
+                    }
+                });
+            }
+
+
+        });
+    }
+</script>
+
+<style>
+    .hide-bullets {
+        list-style:none;
+        margin-left: -40px;
+        margin-top:20px;
+    }
+</style>
+
+<script src="http://fastandretro.com/js/parsley.js"></script>
+
+<script>
+    jQuery(document).ready(function($) {
+        $(".allForms").parsley()
+    });
+</script>
+</body>
+</html>

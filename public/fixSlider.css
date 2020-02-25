@@ -1,0 +1,16 @@
+/** SLIDER **/
+.bx-wrapper {
+    width: 100% !important;
+    padding-bottom: 20px !important;;
+}
+
+.bx-controls {
+    display: none !important;;
+}
+
+.slide {
+    padding:0 !important;
+    width: auto !important;
+    padding-left: 20px !important;
+}
+
